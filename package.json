@@ -1,0 +1,32 @@
+{
+  "name": "is-interactive-element",
+  "version": "0.0.0",
+  "description": "Checks if an element is an interactive element according to the WHATWG spec",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "devDependencies": {
+    "eslint": "^3.4.0",
+    "jsdom": "^9.4.5",
+    "mocha": "^3.0.2"
+  },
+  "scripts": {
+    "test": "mocha ./tests/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/matijs/is-interactive-element.git"
+  },
+  "keywords": [
+    "DOM",
+    "element",
+    "interactive"
+  ],
+  "author": "Matijs Brinkhuis",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/matijs/is-interactive-element/issues"
+  },
+  "homepage": "https://github.com/matijs/is-interactive-element#readme"
+}
