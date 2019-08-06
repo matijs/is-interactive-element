@@ -7,9 +7,9 @@
     "test": "tests"
   },
   "devDependencies": {
-    "eslint": "^3.4.0",
-    "jsdom": "^9.4.5",
-    "mocha": "^3.0.2"
+    "eslint": "latest",
+    "jsdom": "latest",
+    "mocha": "latest"
   },
   "scripts": {
     "test": "mocha ./tests/**/*.js"
