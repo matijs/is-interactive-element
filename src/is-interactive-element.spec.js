@@ -1,72 +1,71 @@
-/* global describe, it */
 'use strict';
-const isInteractiveElement = require( './is-interactive-element.js' );
-const JSDOM = require( 'jsdom' ).JSDOM;
-const assert = require( 'assert' );
-const { document } = (new JSDOM()).window;
+const isInteractiveElement = require('./is-interactive-element.js');
+const JSDOM = require('jsdom').JSDOM;
+const assert = require('assert');
+const { document } = new JSDOM().window;
 
-describe( 'isInteractiveElement', function() {
-    it( 'should return true for a <a> element', function() {
-        const a = document.createElement( 'a' );
+describe('isInteractiveElement', function() {
+    it('should return true for a <a> element', function() {
+        const a = document.createElement('a');
 
-        assert.equal( isInteractiveElement( a ), true );
+        assert.equal(isInteractiveElement(a), true);
     });
 
-    it( 'should return true for a <button> element', function() {
-        const button = document.createElement( 'button' );
+    it('should return true for a <button> element', function() {
+        const button = document.createElement('button');
 
-        assert.equal( isInteractiveElement( button ), true );
+        assert.equal(isInteractiveElement(button), true);
     });
 
-    it( 'should return true for an <input> element', function() {
-        const input = document.createElement( 'input' );
+    it('should return true for an <input> element', function() {
+        const input = document.createElement('input');
 
-        assert.equal( isInteractiveElement( input ), true );
+        assert.equal(isInteractiveElement(input), true);
     });
 
-    it( 'should return false for an <input type="hidden"> element', function() {
-        const input = document.createElement( 'input' );
+    it('should return false for an <input type="hidden"> element', function() {
+        const input = document.createElement('input');
 
         input.type = 'hidden';
-        assert.equal( isInteractiveElement( input ), false );
+        assert.equal(isInteractiveElement(input), false);
     });
 
-    it( 'should return true for an <audio controls> element', function() {
-        const audio = document.createElement( 'audio' );
+    it('should return true for an <audio controls> element', function() {
+        const audio = document.createElement('audio');
 
         audio.controls = true;
-        assert.equal( isInteractiveElement( audio ), true );
+        assert.equal(isInteractiveElement(audio), true);
     });
 
-    it( 'should return false for an <audio> element', function() {
-        const audio = document.createElement( 'audio' );
+    it('should return false for an <audio> element', function() {
+        const audio = document.createElement('audio');
 
-        assert.equal( isInteractiveElement( audio ), false );
+        assert.equal(isInteractiveElement(audio), false);
     });
 
-    it( 'should return true for an <img usemap> element', function() {
-        const img = document.createElement( 'img' );
+    it('should return true for an <img usemap> element', function() {
+        const img = document.createElement('img');
 
         img.useMap = '#foo';
-        assert.equal( isInteractiveElement( img ), true );
+        assert.equal(isInteractiveElement(img), true);
     });
 
-    it( 'should return false for an <img> element', function() {
-        const img = document.createElement( 'img' );
+    it('should return false for an <img> element', function() {
+        const img = document.createElement('img');
 
-        assert.equal( isInteractiveElement( img ), false );
+        assert.equal(isInteractiveElement(img), false);
     });
 
-    it( 'should return true for a <th sorted> element', function() {
-        const th = document.createElement( 'th' );
+    it('should return true for a <th sorted> element', function() {
+        const th = document.createElement('th');
         th.setAttribute('sorted', '1');
 
-        assert.equal( isInteractiveElement( th ), true );
+        assert.equal(isInteractiveElement(th), true);
     });
 
-    it( 'should return false for a <th> element', function() {
-        const th = document.createElement( 'th' );
+    it('should return false for a <th> element', function() {
+        const th = document.createElement('th');
 
-        assert.equal( isInteractiveElement( th ), false );
+        assert.equal(isInteractiveElement(th), false);
     });
 });

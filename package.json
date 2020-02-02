@@ -4,9 +4,12 @@
   "description": "Checks if an element is an interactive element according to the WHATWG spec",
   "main": "src/is-interactive-element.js",
   "devDependencies": {
-    "eslint": "latest",
-    "jsdom": "latest",
-    "mocha": "latest"
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "jsdom": "^16.1.0",
+    "mocha": "^7.0.1",
+    "prettier": "^1.19.1"
   },
   "scripts": {
     "test": "mocha ./src/**/*.spec.js"
@@ -25,5 +28,6 @@
   "bugs": {
     "url": "https://github.com/matijs/is-interactive-element/issues"
   },
-  "homepage": "https://github.com/matijs/is-interactive-element#readme"
+  "homepage": "https://github.com/matijs/is-interactive-element#readme",
+  "dependencies": {}
 }
