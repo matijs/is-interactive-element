@@ -1,6 +1,6 @@
 /* global describe, it */
 'use strict';
-const isInteractiveElement = require( '../index.js' );
+const isInteractiveElement = require( './is-interactive-element.js' );
 const JSDOM = require( 'jsdom' ).JSDOM;
 const assert = require( 'assert' );
 const { document } = (new JSDOM()).window;

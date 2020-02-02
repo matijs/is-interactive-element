@@ -2,17 +2,14 @@
   "name": "is-interactive-element",
   "version": "0.0.0",
   "description": "Checks if an element is an interactive element according to the WHATWG spec",
-  "main": "index.js",
-  "directories": {
-    "test": "tests"
-  },
+  "main": "src/is-interactive-element.js",
   "devDependencies": {
     "eslint": "latest",
     "jsdom": "latest",
     "mocha": "latest"
   },
   "scripts": {
-    "test": "mocha ./tests/**/*.js"
+    "test": "mocha ./src/**/*.spec.js"
   },
   "repository": {
     "type": "git",
