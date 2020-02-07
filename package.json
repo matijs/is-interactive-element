@@ -1,7 +1,7 @@
 {
   "name": "is-interactive-element",
   "version": "2.0.1",
-  "description": "Checks if an element is an interactive element according to the WHATWG spec",
+  "description": "Checks if an element is an interactive element according to the HTML specification",
   "main": "dist/index.js",
   "devDependencies": {
     "@types/jest": "^25.1.2",
