@@ -1,20 +1,20 @@
-name: is-interactive-element
+name: build
 on: push
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
-        steps:
-            - uses: actions/checkout@v2
-            - uses: actions/cache@v1
-              with:
-                  path: ~/.npm
-                  key: npm-${{ hashFiles('**/package-lock.json') }}
-            - uses: actions/setup-node@v1
-              with:
-                  node-version: 12
-            - run: npm ci
-            - run: npm run lint
-            - run: npm test
-            - run: npm run build
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: npm-${{ hashFiles('**/package-lock.json') }}
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - run: npm ci
+      - run: npm run lint
+      - run: npm test
+      - run: npm run build
 
