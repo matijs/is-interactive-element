@@ -24,6 +24,7 @@
     "prebuild": "rimraf dist",
     "build": "tsc",
     "lint": "eslint --ext ts ./src",
+    "prepublishOnly": "npm run lint && npm test && npm run build",
     "test": "jest"
   },
   "repository": {
