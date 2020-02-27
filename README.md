@@ -2,6 +2,7 @@
 
 ![build](https://github.com/matijs/is-interactive-element/workflows/build/badge.svg)
 [![Version on npm](https://img.shields.io/npm/v/is-interactive-element.svg)](https://www.npmjs.com/package/is-interactive-element)
+[![Known Vulnerabilities](https://snyk.io/test/github/matijs/is-interactive-element/badge.svg?targetFile=package.json)](https://snyk.io/test/github/matijs/is-interactive-element?targetFile=package.json)
 
 isInteractiveElement checks if a DOM element is an [interactive element](https://developers.whatwg.org/content-models.html#interactive-content) or not.
 
