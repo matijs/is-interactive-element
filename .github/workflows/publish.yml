@@ -12,11 +12,11 @@ jobs:
       - uses: actions/cache@v1
         with:
           path: ~/.npm
-          key: npm-${{ hashFiles('**/package-lock.json') }}
+          key: npm-${{ hashFiles('**/package.json') }}
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: npm ci
+      - run: npm install
       - run: |
           npm config set "//registry.npmjs.org/:_authToken" "${NPM_TOKEN}"
           npm publish
